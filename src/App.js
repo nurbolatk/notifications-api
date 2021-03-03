@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { sendNotification } from "./sw";
 
 function checkNotificationPromise() {
   try {
@@ -13,7 +14,7 @@ function checkNotificationPromise() {
 }
 
 function send() {
-  new Notification("PIDR");
+  sendNotification();
 }
 
 function App() {
