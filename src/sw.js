@@ -1,4 +1,9 @@
 function registerServiceWorker() {
+  if ("serviceWorker" in navigator) {
+    console.log("serviceWorker est");
+  } else {
+    console.log("serviceWorker net");
+  }
   return navigator.serviceWorker.register("/sw.js");
 }
 
